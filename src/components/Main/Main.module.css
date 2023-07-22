@@ -1,0 +1,9 @@
+.main {
+  flex: 1 1 auto;
+  padding: 15px 0;
+}
+
+.mainContent {
+  display: flex;
+  gap: 30px;
+}

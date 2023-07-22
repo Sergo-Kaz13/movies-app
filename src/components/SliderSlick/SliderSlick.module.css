@@ -1,0 +1,26 @@
+.slide {
+}
+
+.title {
+  color: #fff;
+  font-weight: bold;
+  opacity: 0.9;
+  padding: 5px;
+  transition: all ease-in-out 0.28s;
+}
+
+.swiperItem {
+  display: inline-block;
+  padding: 10px;
+  transition: all ease-in-out 0.28s;
+}
+
+.swiperItem:hover {
+  box-shadow: inset 0px 0px 20px -3px rgba(225, 129, 11, 1);
+  background: #fff;
+  border-radius: 5px;
+}
+
+.swiperItem:hover .title {
+  color: rgb(225, 129, 11);
+}

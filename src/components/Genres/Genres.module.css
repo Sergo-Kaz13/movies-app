@@ -1,0 +1,33 @@
+.genres {
+  padding: 30px;
+  border-radius: 10px;
+  background: rgb(225, 129, 11);
+  box-shadow: 9px 9px 10px -2px rgba(66, 68, 90, 1);
+  color: #fff;
+  font-size: 18px;
+  align-self: flex-start;
+}
+
+.genresItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.genresItem {
+}
+
+.genresItem:hover a {
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(225, 129, 11);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.genresItem a {
+  display: inline-block;
+  width: 100%;
+  padding: 2px 5px 2px 15px;
+  white-space: nowrap;
+  transition: all ease-in-out 0.28s;
+}

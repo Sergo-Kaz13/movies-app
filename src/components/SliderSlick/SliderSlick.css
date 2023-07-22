@@ -1,0 +1,4 @@
+div .swiper-slide {
+  display: inline-flex;
+  height: initial;
+}

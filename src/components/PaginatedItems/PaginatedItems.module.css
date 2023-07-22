@@ -1,0 +1,68 @@
+.paginateBlock {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.break {
+  color: rgb(248, 134, 3);
+}
+
+.paginateLink {
+  border: 3px solid rgb(248, 134, 3);
+  padding: 0 5px;
+  transition: all ease-in-out 0.28s;
+  background: rgb(248, 134, 3);
+}
+
+.paginateLink:hover {
+  cursor: pointer;
+  /* border: 1px solid #fff; */
+  /* background: rgb(248, 134, 3); */
+}
+
+.active {
+  color: rgb(248, 134, 3);
+  background: #fff;
+  border: 3px solid rgb(248, 134, 3);
+}
+
+.active:hover {
+  cursor: default;
+  /* background: none; */
+  /* border: none; */
+}
+
+.nextBtn,
+.prevBtn {
+  padding: 3px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 3px solid rgb(248, 134, 3);
+  background: rgb(248, 134, 3);
+  transition: all ease-in-out 0.28s;
+}
+
+.nextBtn:hover,
+.prevBtn:hover {
+  cursor: pointer;
+  /* border: 1px solid #fff; */
+  background: rgb(248, 134, 3);
+}
+
+.disabledBtn {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.disabledBtn:hover {
+  cursor: default;
+  /* background: rgb(248, 134, 3); */
+  /* background: none; */
+  /* border: 1px solid rgb(248, 134, 3); */
+}
