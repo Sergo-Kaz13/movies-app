@@ -32,7 +32,7 @@ const Movie = (props) => {
     ));
 
   const movieInfo = movie && (
-    <div className={style.movieBlock}>
+    <>
       <div className={style.movieBlockInfo}>
         <div className={style.movieDetailedInfo}>
           <div className={style.movieImage}>
@@ -65,7 +65,7 @@ const Movie = (props) => {
         </div>
       </div>
       {idMovie && <MovieSimilar id={idMovie} />}
-    </div>
+    </>
   );
 
   const { id } = useParams();
@@ -74,7 +74,7 @@ const Movie = (props) => {
     getMovie(id);
   }, [getMovie, id]);
 
-  return <div className={style.movie_block}>{movieInfo}</div>;
+  return <div className={style.movieBlock}>{movieInfo}</div>;
 };
 
 const mapStateToProps = (state) => ({

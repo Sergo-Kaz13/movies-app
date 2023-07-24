@@ -3,11 +3,11 @@ import PaginatedItems from "../PaginatedItems/PaginatedItems";
 import { connect } from "react-redux";
 import { getMovies, setActivePage } from "../../redux/moviesReducer";
 import style from "./Movies.module.css";
-import Container from "../Container/Container";
 import { Link } from "react-router-dom";
 
 const Movies = (props) => {
-  const { getMovies, setActivePage, movies, pages, activePage } = props;
+  const { getMovies, setActivePage, movies, pages, activePage, urlActive } =
+    props;
 
   const itemsMovies =
     movies &&
@@ -42,18 +42,19 @@ const Movies = (props) => {
     });
 
   useEffect(() => {
-    getMovies(activePage);
-  }, [getMovies, activePage]);
+    getMovies(urlActive, activePage);
+  }, [getMovies, activePage, urlActive]);
 
   return (
-    <Container>
+    <div className={style.movies_wrapper}>
       <div className={style.movies_block}>{itemsMovies}</div>
       <PaginatedItems
         itemsPerPage={1}
         items={pages}
         setCurrentPage={setActivePage}
+        activePage={activePage}
       />
-    </Container>
+    </div>
   );
 };
 
@@ -61,6 +62,7 @@ const mapStateToProps = (state) => ({
   movies: state.moviesReducer.movies,
   pages: state.moviesReducer.pages,
   activePage: state.moviesReducer.activePage,
+  urlActive: state.moviesReducer.urlActive,
 });
 
 export default connect(mapStateToProps, { getMovies, setActivePage })(Movies);

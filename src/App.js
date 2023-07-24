@@ -15,7 +15,7 @@ function App() {
         <Main>
           <Genres />
           <Routes>
-            <Route path="/genre/:id" element={<Genres />} />
+            <Route path="/genre/:name/:id" element={<Movies />} />
             <Route path="/" element={<Movies />} />
             <Route path="/:id" element={<Movie />} />
           </Routes>

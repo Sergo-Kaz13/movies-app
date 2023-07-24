@@ -1,20 +1,32 @@
 import React from "react";
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { getGenres } from "../../redux/genresReducer";
+import { updateUrl, setActivePageReset } from "../../redux/moviesReducer";
 import style from "./Genres.module.css";
 
 const Genre = (props) => {
-  const { getGenres, genres } = props;
+  function updateDataUrl(id) {
+    updateUrl(`discover/movie?with_genres=${id}&`);
+    setActivePageReset();
+  }
+
+  const { getGenres, genres, updateUrl } = props;
 
   const genresList =
     genres &&
     genres.map(({ id, name }) => (
       <li key={id} className={style.genresItem}>
-        <Link to={`/genre/${id}`} className={style.genresItemLink}>
+        <NavLink
+          to={`/genre/${name}/${id}`}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          onClick={() => updateDataUrl(id)}
+        >
           {name}
-        </Link>
+        </NavLink>
       </li>
     ));
 
@@ -33,4 +45,8 @@ const mapStateToProps = (state) => ({
   genres: state.genresReducer.genres,
 });
 
-export default connect(mapStateToProps, { getGenres })(Genre);
+export default connect(mapStateToProps, {
+  getGenres,
+  updateUrl,
+  setActivePageReset,
+})(Genre);

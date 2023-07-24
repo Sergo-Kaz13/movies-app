@@ -6,6 +6,7 @@ const Main = (props) => {
   return (
     <div className={style.main}>
       <Container>
+        <div className={style.filter}>filter</div>
         <div className={style.mainContent}>{props.children}</div>
       </Container>
     </div>

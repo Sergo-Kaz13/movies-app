@@ -1,5 +1,6 @@
 .genres {
-  padding: 30px;
+  min-width: 160px;
+  padding: 10px;
   border-radius: 10px;
   background: rgb(225, 129, 11);
   box-shadow: 9px 9px 10px -2px rgba(66, 68, 90, 1);

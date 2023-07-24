@@ -1,11 +1,14 @@
 .movieBlock {
+  width: calc(100% - 190px);
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: 2px solid rgb(225, 129, 11);
 }
 
 .movieBlockInfo {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 30%) calc(70% - 30px));
+
   gap: 30px;
   margin-bottom: 50px;
   padding-bottom: 10px;
@@ -17,11 +20,9 @@
 }
 
 .movieInfo {
-  flex: 1 1 30%;
 }
 
 .movieSlider {
-  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -34,7 +35,6 @@
 }
 
 .movieData {
-  /* background: rgb(225, 129, 11); */
 }
 
 .movieDataList {
