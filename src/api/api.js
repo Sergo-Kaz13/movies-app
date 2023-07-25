@@ -10,8 +10,10 @@ const instance = axios.create({
 });
 
 export const moviesAPI = {
-  getMovies(url, activePage) {
-    return instance.get(`${url}language=en-US&page=${activePage}`);
+  getMovies(url, sort, activePage) {
+    return instance.get(
+      `${url}sort_by=${sort}&vote_count.gte=40&language=en-US&page=${activePage}`
+    );
   },
 };
 

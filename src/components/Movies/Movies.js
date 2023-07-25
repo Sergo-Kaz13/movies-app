@@ -6,8 +6,15 @@ import style from "./Movies.module.css";
 import { Link } from "react-router-dom";
 
 const Movies = (props) => {
-  const { getMovies, setActivePage, movies, pages, activePage, urlActive } =
-    props;
+  const {
+    getMovies,
+    setActivePage,
+    movies,
+    pages,
+    activePage,
+    sort,
+    urlActive,
+  } = props;
 
   const itemsMovies =
     movies &&
@@ -42,8 +49,8 @@ const Movies = (props) => {
     });
 
   useEffect(() => {
-    getMovies(urlActive, activePage);
-  }, [getMovies, activePage, urlActive]);
+    getMovies(urlActive, sort, activePage);
+  }, [getMovies, activePage, sort, urlActive]);
 
   return (
     <div className={style.movies_wrapper}>
@@ -63,6 +70,7 @@ const mapStateToProps = (state) => ({
   pages: state.moviesReducer.pages,
   activePage: state.moviesReducer.activePage,
   urlActive: state.moviesReducer.urlActive,
+  sort: state.moviesReducer.sort,
 });
 
 export default connect(mapStateToProps, { getMovies, setActivePage })(Movies);

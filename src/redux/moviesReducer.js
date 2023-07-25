@@ -4,12 +4,15 @@ const GET_MOVIES = "GET_MOVIES";
 const SET_ACTIVE_PAGE = "SET_ACTIVE_PAGE";
 const SET_URL_ACTIVE = "SET_URL_ACTIVE";
 const SET_ACTIVE_PAGE_RESET = "SET_ACTIVE_PAGE_RESET";
+const SET_SORT = "SET_SORT";
 
 const initialState = {
   movies: [],
   pages: null,
   activePage: 1,
-  urlActive: "movie/popular?",
+  // urlActive: "movie/popular?",
+  urlActive: "discover/movie?",
+  sort: "popularity.desc",
 };
 
 export const moviesReducer = (state = initialState, action) => {
@@ -34,6 +37,11 @@ export const moviesReducer = (state = initialState, action) => {
       return {
         ...state,
         activePage: 1,
+      };
+    case SET_SORT:
+      return {
+        ...state,
+        sort: action.typeSort,
       };
     default:
       return state;
@@ -67,9 +75,16 @@ export const setActivePageReset = () => {
   };
 };
 
-export const getMovies = (url, activePage) => {
+export const setTypeSort = (typeSort) => {
+  return {
+    type: SET_SORT,
+    typeSort,
+  };
+};
+
+export const getMovies = (url, sort, activePage) => {
   return (dispatch) => {
-    moviesAPI.getMovies(url, activePage).then((response) => {
+    moviesAPI.getMovies(url, sort, activePage).then((response) => {
       dispatch(setMovies(response));
       dispatch(setActivePage(activePage));
     });
@@ -80,5 +95,11 @@ export const updateUrl = (urlActive) => {
   return (dispatch) => {
     dispatch(setUrlActive(urlActive));
     dispatch(setActivePageReset());
+  };
+};
+
+export const typeSort = (typeSort) => {
+  return (dispatch) => {
+    dispatch(setTypeSort(typeSort));
   };
 };

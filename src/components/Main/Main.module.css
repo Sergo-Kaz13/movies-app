@@ -7,3 +7,10 @@
   display: flex;
   gap: 30px;
 }
+
+.control {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-bottom: 30px;
+}
