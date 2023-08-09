@@ -5,6 +5,8 @@ import { getMovie } from "../../redux/movieReducer";
 import MovieSimilar from "../MovieSimilar/MovieSimilar";
 import MovieVideos from "../MovieVideos/MovieVideos";
 import style from "./Movie.module.css";
+import btnFollow from "../../assets/images/like-thumbs-up-hand-social-media_icon-icons.com_61429.png";
+import btnUnfollow from "../../assets/images/thumbs-down-hand-social-media-dislike_icon-icons.com_61424.png";
 
 const Movie = (props) => {
   const { getMovie, movie } = props;
@@ -19,9 +21,13 @@ const Movie = (props) => {
     runtime,
     status,
     vote_average,
+    vote_count,
   } = movie;
 
   const vote_averageFix = vote_average && vote_average.toFixed(1);
+
+  const follow = Math.round((vote_count / 10) * vote_averageFix) || 0;
+  const unFollow = vote_count - follow || 0;
 
   const genresAll =
     genres &&
@@ -54,6 +60,22 @@ const Movie = (props) => {
                 <span>RATING:</span> {vote_averageFix}
               </li>
             </ul>
+            <div className={style.ratingScale}>
+              <span
+                className={style.scaleFollow}
+                style={{ width: `${vote_averageFix * 10}%` }}
+              ></span>
+              <div className={style.blockFollowUnfollow}>
+                <span className={style.countFollow}>{follow}</span>
+                <button className={style.btnFollow}>
+                  <img src={btnFollow} alt="" />
+                </button>
+                <button className={style.btnUnfollow}>
+                  <img src={btnUnfollow} alt="" />
+                </button>
+                <span className={style.countUnfollow}>{unFollow}</span>
+              </div>
+            </div>
           </div>
         </div>
         <div className={style.movieInfo}>

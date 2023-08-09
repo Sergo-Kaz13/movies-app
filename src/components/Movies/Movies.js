@@ -49,7 +49,7 @@ const Movies = (props) => {
     });
 
   useEffect(() => {
-    getMovies(urlActive, sort, activePage);
+    getMovies({ urlActive, sort, activePage });
   }, [getMovies, activePage, sort, urlActive]);
 
   return (

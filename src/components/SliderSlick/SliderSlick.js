@@ -60,7 +60,7 @@ const SliderSlick = (props) => {
         },
       }}
       navigation
-      slidesPerView={5}
+      // slidesPerView={5}
     >
       {slides}
     </Swiper>

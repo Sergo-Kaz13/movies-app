@@ -18,17 +18,17 @@
 .genresItem {
 }
 
-.genresItem:hover a {
-  background: rgba(255, 255, 255, 0.8);
-  color: rgb(225, 129, 11);
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.genresItem a {
+.genresItem a:not(.active) {
   display: inline-block;
   width: 100%;
   padding: 2px 5px 2px 15px;
   white-space: nowrap;
   transition: all ease-in-out 0.28s;
+}
+
+.genresItem:hover a {
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(225, 129, 11);
+  padding-left: 10px;
+  padding-right: 10px;
 }

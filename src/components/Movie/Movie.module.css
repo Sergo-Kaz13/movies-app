@@ -16,7 +16,7 @@
 }
 
 .movieImage {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .movieInfo {
@@ -31,7 +31,7 @@
 }
 
 .movieDetailedInfo {
-  flex: 0 1 30%;
+  /* flex: 0 1 30%; */
 }
 
 .movieData {
@@ -39,6 +39,8 @@
 
 .movieDataList {
   font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 50px;
 }
 
 .movieDataList li {
@@ -48,7 +50,7 @@
 .movieDataList span {
   font-size: 14px;
   font-weight: 300;
-  padding-right: 15px;
+  padding-right: 5px;
 }
 
 .movieTitle {
@@ -66,10 +68,84 @@
 
 .genres {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.7;
+}
+
+.ratingScale {
+  position: relative;
+  /* display: flex; */
+  background: rgba(255, 0, 0, 0.7);
+  height: 10px;
+}
+
+.scaleFollow {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(29, 240, 99);
+  height: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.blockFollowUnfollow {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  top: -30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.scaleUnfollow {
+}
+
+.btnFollow {
+  margin-right: auto;
+}
+
+.btnFollow,
+.btnUnfollow {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnFollow:hover,
+.btnUnfollow:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.btnFollow:active,
+.btnUnfollow:active {
+  transform: translateY(2px);
+}
+
+.btnFollow img,
+.btnUnfollow img {
+  width: 100%;
+}
+
+.countFollow {
+}
+
+.countUnfollow {
 }

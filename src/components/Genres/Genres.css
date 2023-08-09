@@ -1,0 +1,6 @@
+li a.active {
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(225, 129, 11);
+  padding-left: 10px !important;
+  cursor: default;
+}

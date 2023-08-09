@@ -10,9 +10,9 @@ const initialState = {
   movies: [],
   pages: null,
   activePage: 1,
-  // urlActive: "movie/popular?",
-  urlActive: "discover/movie?",
-  sort: "popularity.desc",
+  urlActive:
+    "discover/movie?vote_count.gte=40&include_adult=true&language=en-US",
+  sort: "&sort_by=popularity.desc",
 };
 
 export const moviesReducer = (state = initialState, action) => {
@@ -82,11 +82,11 @@ export const setTypeSort = (typeSort) => {
   };
 };
 
-export const getMovies = (url, sort, activePage) => {
+export const getMovies = (urlData) => {
   return (dispatch) => {
-    moviesAPI.getMovies(url, sort, activePage).then((response) => {
+    moviesAPI.getMovies(urlData).then((response) => {
       dispatch(setMovies(response));
-      dispatch(setActivePage(activePage));
+      dispatch(setActivePage(urlData.activePage));
     });
   };
 };

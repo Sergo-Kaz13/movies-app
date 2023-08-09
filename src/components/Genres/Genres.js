@@ -5,10 +5,11 @@ import { NavLink } from "react-router-dom";
 import { getGenres } from "../../redux/genresReducer";
 import { updateUrl, setActivePageReset } from "../../redux/moviesReducer";
 import style from "./Genres.module.css";
+import "./Genres.css";
 
 const Genre = (props) => {
   function updateDataUrl(id) {
-    updateUrl(`discover/movie?with_genres=${id}&`);
+    updateUrl(`discover/movie?with_genres=${id}`);
     setActivePageReset();
   }
 

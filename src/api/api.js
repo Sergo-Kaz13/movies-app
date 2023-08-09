@@ -10,18 +10,12 @@ const instance = axios.create({
 });
 
 export const moviesAPI = {
-  getMovies(url, sort, activePage) {
+  getMovies(urlData) {
     return instance.get(
-      `${url}sort_by=${sort}&vote_count.gte=40&language=en-US&page=${activePage}`
+      `${urlData.urlActive}${urlData.sort}&page=${urlData.activePage}`
     );
   },
 };
-
-// export const moviesAPI = {
-//   getMovies(url) {
-//     return instance.get(url);
-//   },
-// };
 
 export const moviesUpcomingAPI = {
   getMoviesUpcoming() {
