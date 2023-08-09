@@ -46,3 +46,15 @@ export const genresMovieListAPI = {
     return instance.get("genre/movie/list");
   },
 };
+
+export const authenticationAPI = {
+  getAuthentication(token) {
+    return instance.get(`https://www.themoviedb.org/authenticate/${token}`);
+  },
+};
+
+export const tokenAPI = {
+  getToken() {
+    return instance.get("authentication/token/new");
+  },
+};

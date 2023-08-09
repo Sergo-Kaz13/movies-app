@@ -5,6 +5,7 @@ import { movieReducer } from "./movieReducer";
 import { movieVideosReducer } from "./movieVideosReducer";
 import { movieSimilarReducer } from "./movieSimilarReducer";
 import { genresReducer } from "./genresReducer";
+import { authenticationReducer } from "./authenticationReducer";
 
 export const rootReducer = combineReducers({
   moviesReducer: moviesReducer,
@@ -13,4 +14,5 @@ export const rootReducer = combineReducers({
   movieVideosReducer: movieVideosReducer,
   movieSimilarReducer: movieSimilarReducer,
   genresReducer: genresReducer,
+  authenticationReducer: authenticationReducer,
 });
