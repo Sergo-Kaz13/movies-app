@@ -1,3 +1,29 @@
 .login {
   width: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px -2px rgba(66, 68, 90, 1);
+  transition: all ease-in-out 0.28s;
+}
+
+.login:hover {
+  cursor: pointer;
+}
+
+.login:hover .loginImg {
+  transform: scale(1.16);
+}
+
+.login:active .loginImg {
+  transform: scale(1);
+}
+
+.login:active {
+  box-shadow: none;
+}
+
+.loginImg {
+  width: 100%;
+  object-fit: cover;
+  transition: all ease-in-out 0.28s;
 }

@@ -1,66 +1,47 @@
-/* .search {
-  position: relative;
-}
-
-input[type="text"] {
-  height: 30px;
+.searchBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  width: 300px;
+  padding: 3px 10px 3px 0;
+  overflow: hidden;
+  transition: all ease-out 0.28s;
+  border: 2px solid rgb(225, 129, 11);
+  border-radius: 15px;
   font-size: 18px;
-  display: inline-block;
+}
+
+.fieldSearch {
+  padding: 8px 10px 8px 15px;
   border: none;
+  overflow: hidden;
+  width: 100%;
+  font-size: 18px;
+  color: rgba(6, 6, 6, 0.6);
+  font-weight: bold;
+}
+
+.fieldSearch:active,
+.fieldSearch:focus,
+.fieldSearch:hover,
+.btnSearch:focus {
   outline: none;
-  color: #555;
-  padding: 3px;
-  padding-right: 32px;
-  width: 0px;
-  position: absolute;
-  top: -16px;
-  right: 0;
-  background: none;
-  z-index: 3;
-  transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
-  cursor: pointer;
+  outline-offset: 0;
 }
 
-input[type="text"]:focus:hover {
-  border-bottom: 1px solid #bbb;
+.btnSearch {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.28s;
 }
 
-input[type="text"]:hover ~ input[type="submit"] {
-  opacity: 1;
+.btnSearch:hover {
+  font-size: 20px;
 }
 
-input[type="text"]:active ~ input[type="submit"] {
-  transform: translate(-1px, 1px);
+.btnSearch:active {
+  font-size: 18px;
 }
-
-input[type="text"]:focus {
-  width: 600px;
-  z-index: 1;
-  border-bottom: 1px solid #bbb;
-  cursor: text;
-}
-
-input[type="submit"] {
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  color: red;
-  background: url(../../assets/images/search.png) center / contain no-repeat;
-  text-indent: -10000px;
-  border: none;
-  position: absolute;
-  top: -16px;
-  right: 0;
-  z-index: 2;
-  opacity: 0.8;
-  cursor: pointer;
-  transition: all 0.28s ease;
-}
-
-input[type="submit"]:hover {
-  opacity: 1;
-}
-
-input[type="submit"]:active {
-  transform: translate(-1px, 1px) !important;
-} */

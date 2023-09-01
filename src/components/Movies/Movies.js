@@ -18,7 +18,7 @@ const Movies = (props) => {
 
   const itemsMovies =
     movies &&
-    movies.map(({ id, poster_path, release_date, vote_average }) => {
+    movies.map(({ id, poster_path, release_date, vote_average, title }) => {
       release_date = release_date.slice(0, 4);
       vote_average = vote_average.toFixed(1);
 
@@ -29,9 +29,11 @@ const Movies = (props) => {
           className={style.itemMovie}
           key={id}
           style={{
+            backgroundColor: `rgb(225, 179, 63)`,
             background: `url(https://image.tmdb.org/t/p/w500${poster_path}) center / cover no-repeat`,
           }}
         >
+          {!poster_path && <span className={style.moviesTitle}>{title}</span>}
           <span className={style.releaseData}>{release_date}</span>
           <span
             className={`${style.voteAverage} ${

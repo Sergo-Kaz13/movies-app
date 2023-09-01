@@ -49,6 +49,9 @@ const SliderSlick = (props) => {
         320: {
           slidesPerView: 2,
         },
+        540: {
+          slidesPerView: 3,
+        },
         640: {
           slidesPerView: 4,
         },

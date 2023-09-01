@@ -19,7 +19,7 @@ export const moviesAPI = {
 
 export const moviesUpcomingAPI = {
   getMoviesUpcoming() {
-    return instance.get(`movie/upcoming?language=en-US`);
+    return instance.get(`movie/upcoming?vote_count.gte=30&language=en-US`);
   },
 };
 
@@ -47,11 +47,13 @@ export const genresMovieListAPI = {
   },
 };
 
-export const authenticationAPI = {
-  getAuthentication(token) {
-    return instance.get(`https://www.themoviedb.org/authenticate/${token}`);
-  },
-};
+// export const authenticationAPI = {
+//   getAuthentication(token) {
+//     window.location.replace(
+//       `https://www.themoviedb.org/authenticate/${token}?redirect_to=http://localhost:3000/`
+//     );
+//   },
+// };
 
 export const tokenAPI = {
   getToken() {

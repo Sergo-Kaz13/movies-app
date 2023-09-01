@@ -20,10 +20,19 @@ const Search = (props) => {
 
   return (
     <div className={style.search}>
-      <div>
-        <input type="text" value={searchValue} onChange={handleChange} />
-        <Link to={`/search/${searchValue}`} onClick={logSearchValue}>
-          Search
+      <div className={style.searchBlock}>
+        <input
+          className={style.fieldSearch}
+          type="text"
+          value={searchValue}
+          onChange={handleChange}
+        />
+        <Link
+          className={style.btnSearch}
+          to={`/search/${searchValue}`}
+          onClick={logSearchValue}
+        >
+          🔍
         </Link>
       </div>
 
