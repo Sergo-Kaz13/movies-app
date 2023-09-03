@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Movies from "./components/Movies/Movies";
 import Header from "./components/Header/Header";
@@ -9,7 +9,7 @@ import Genres from "./components/Genres/Genres";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Header />
         <Main>
@@ -23,7 +23,7 @@ function App() {
         </Main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
