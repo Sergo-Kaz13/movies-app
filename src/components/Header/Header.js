@@ -12,10 +12,8 @@ const Header = () => {
       <Container>
         <div className={style.header_block}>
           <Logo />
-          <div className={style.header_interaction}>
-            <Search />
-            <Login />
-          </div>
+          <Search />
+          <Login />
         </div>
       </Container>
       <div className={style.slider}>

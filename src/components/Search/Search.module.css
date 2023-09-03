@@ -1,9 +1,12 @@
+.search {
+  display: flex;
+  flex: 0 1 500px;
+}
+
 .searchBlock {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
   height: 35px;
-  width: 300px;
   padding: 3px 10px 3px 0;
   overflow: hidden;
   transition: all ease-out 0.28s;
@@ -44,4 +47,10 @@
 
 .btnSearch:active {
   font-size: 18px;
+}
+
+@media screen and (max-width: 450px) {
+  .search {
+    order: 3;
+  }
 }

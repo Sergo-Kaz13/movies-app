@@ -7,13 +7,8 @@
 .header_block {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
   padding: 15px 0;
-  align-items: center;
-}
-
-.header_interaction {
-  display: flex;
-  gap: 15px;
   align-items: center;
 }
 
@@ -21,4 +16,11 @@
   background: rgb(225, 129, 11);
   min-height: 300px;
   padding: 15px 0;
+}
+
+@media screen and (max-width: 450px) {
+  .header_block {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
