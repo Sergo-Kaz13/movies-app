@@ -73,3 +73,13 @@
 .voteAverageRed {
   background: rgb(243, 44, 44);
 }
+
+@media screen and (max-width: 800px) {
+  .movies_block {
+    grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+  }
+
+  .itemMovie {
+    height: 300px;
+  }
+}
