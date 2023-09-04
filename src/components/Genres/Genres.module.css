@@ -115,3 +115,12 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .genres {
+    top: 70px;
+    right: 10px;
+    left: inherit;
+    min-width: 200px;
+  }
+}
