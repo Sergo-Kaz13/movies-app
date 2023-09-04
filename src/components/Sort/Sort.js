@@ -33,7 +33,8 @@ const Sort = (props) => {
 
   return (
     <Select
-      className="sort"
+      // className="sort"
+      className={[style["sort-my"], "sort"].join(" ")}
       defaultValue={selectedOption.value}
       options={options}
       onChange={setSelectedOption}
