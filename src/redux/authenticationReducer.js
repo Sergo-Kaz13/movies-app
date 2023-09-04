@@ -28,7 +28,6 @@ export const setToken = (token) => {
 export const getToken = () => {
   return (dispatch) => {
     tokenAPI.getToken().then((response) => {
-      console.log(response);
       dispatch(setToken(response.data.request_token));
     });
   };

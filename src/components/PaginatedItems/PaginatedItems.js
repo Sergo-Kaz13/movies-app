@@ -25,7 +25,7 @@ function PaginatedItems({
         previousLabel="prev"
         renderOnZeroPageCount={null}
         activeLinkClassName={style.active}
-        marginPagesDisplayed={2}
+        marginPagesDisplayed={1}
         containerClassName={style.paginateBlock}
         pageLinkClassName={style.paginateLink}
         nextLinkClassName={style.nextBtn}

@@ -16,6 +16,13 @@ const Movies = (props) => {
     urlActive,
   } = props;
 
+  let countPages = null;
+  if (pages > 199) {
+    countPages = 199;
+  } else {
+    countPages = pages;
+  }
+
   const itemsMovies =
     movies &&
     movies.map(({ id, poster_path, release_date, vote_average, title }) => {
@@ -59,7 +66,7 @@ const Movies = (props) => {
       <div className={style.movies_block}>{itemsMovies}</div>
       <PaginatedItems
         itemsPerPage={1}
-        items={pages}
+        items={countPages}
         setCurrentPage={setActivePage}
         activePage={activePage}
       />

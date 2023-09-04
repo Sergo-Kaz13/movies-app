@@ -11,8 +11,6 @@ const Login = (props) => {
     getToken();
   }, [getToken]);
 
-  console.log(token);
-
   const onLoad = (e) => {
     e.preventDefault();
 
