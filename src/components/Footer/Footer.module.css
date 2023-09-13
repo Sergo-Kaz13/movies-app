@@ -1,6 +1,70 @@
 .footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 30px 5px;
   color: #fff;
-  font-size: 32px;
-  background: rgb(225, 129, 11);
+  font-weight: bold;
+  border-top: 2px solid rgb(225, 129, 11);
+}
+
+.footerLogo,
+.author {
+  font-size: 18px;
+  background: #ffb76b;
+  background: linear-gradient(
+    to right,
+    #ffb76b 0%,
+    #ffa73d 30%,
+    #ff7c00 60%,
+    #ff7f04 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footerLogo {
+  font-size: 15px;
+  background: #0c88cf;
+  background: linear-gradient(to right, #0c88cf 0%, #2d0ccf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact {
+  display: flex;
+  gap: 20px;
+}
+
+.contact li {
+  display: flex;
+  align-items: center;
+}
+
+.iconMail,
+.iconFacebook,
+.iconGithub {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.iconMail {
+  display: flex;
+  width: 30px;
+  height: inherit;
+  border-radius: 0;
+}
+
+.iconMail img,
+.iconFacebook img,
+.iconGithub img {
+  display: inline-block;
+  align-self: center;
+  width: 100%;
+  object-fit: cover;
 }
