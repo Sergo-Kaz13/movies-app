@@ -2,7 +2,6 @@
   width: calc(100% - 190px);
   padding-bottom: 30px;
   margin-bottom: 30px;
-  border-bottom: 2px solid rgb(225, 129, 11);
 }
 
 .movieBlockInfo {
@@ -11,8 +10,14 @@
 
   gap: 30px;
   margin-bottom: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   border-bottom: 2px solid rgb(225, 129, 11);
+}
+
+@media screen and (max-width: 720px) {
+  .movieBlock {
+    width: 100%;
+  }
 }
 
 .movieImage {

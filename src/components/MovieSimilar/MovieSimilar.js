@@ -70,10 +70,16 @@ const MovieSimilar = (props) => {
           320: {
             slidesPerView: 2,
           },
-          640: {
+          480: {
             slidesPerView: 3,
           },
-          768: {
+          530: {
+            slidesPerView: 4,
+          },
+          640: {
+            slidesPerView: 5,
+          },
+          721: {
             slidesPerView: 4,
           },
           1024: {
