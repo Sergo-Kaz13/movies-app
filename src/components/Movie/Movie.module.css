@@ -14,12 +14,6 @@
   border-bottom: 2px solid rgb(225, 129, 11);
 }
 
-@media screen and (max-width: 720px) {
-  .movieBlock {
-    width: 100%;
-  }
-}
-
 .movieImage {
   margin-bottom: 10px;
 }
@@ -153,4 +147,27 @@
 }
 
 .countUnfollow {
+}
+
+@media screen and (max-width: 720px) {
+  .movieBlock {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .movieBlockInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movieDetailedInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .movieImage {
+    flex: 1 0 120px;
+  }
 }
